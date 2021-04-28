@@ -1,0 +1,21 @@
+{
+  "Cors": {
+    "Policies": [{
+        "IsDefaultPolicy": true,
+        "Name": "MyDefaultPolicy",
+        "ExposedHeaders": [],
+        "Headers": [ "*" ],
+        "Methods": [ "*" ],
+        "Origins": [ "https://localhost:4200" ],
+        "SupportsCredentials": true
+      }, {
+        "IsDefaultPolicy": false,
+        "Name": "MyPolicy",
+        "ExposedHeaders": ["GET"],
+        "Headers": [ "Authorization", "Content-Type" ],
+        "Methods": [ "PUT", "DELETE", "PATCH" ],
+        "Origins": [ "*" ],
+        "SupportsCredentials": false
+      }]
+  }
+}
